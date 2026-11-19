@@ -1,0 +1,82 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="Script" path="res://scripts/characters/Lili.gd" id="1_lili"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_01.png" id="2_lili_01"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_02.png" id="3_lili_02"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_03.png" id="4_lili_03"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_04.png" id="5_lili_04"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_05.png" id="6_lili_05"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_06.png" id="7_lili_06"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_07.png" id="8_lili_07"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_08.png" id="9_lili_08"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_09.png" id="10_lili_09"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_10.png" id="11_lili_10"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_11.png" id="12_lili_11"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_12.png" id="13_lili_12"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_13.png" id="14_lili_13"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_14.png" id="15_lili_14"]
+[ext_resource type="Texture2D" path="res://assets/characters/lili/lili_15.png" id="16_lili_15"]
+
+[sub_resource type="CircleShape2D" id="CircleShapeLili"]
+radius = 28.0
+
+[sub_resource type="SpriteFrames" id="SpriteFramesLili"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": ExtResource("6_lili_05")}],
+"loop": true,
+"name": &"idle_right",
+"speed": 2.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("8_lili_07")}],
+"loop": true,
+"name": &"idle_left",
+"speed": 2.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("9_lili_08")}, {"duration": 1.0, "texture": ExtResource("10_lili_09")}, {"duration": 1.0, "texture": ExtResource("11_lili_10")}, {"duration": 1.0, "texture": ExtResource("12_lili_11")}],
+"loop": true,
+"name": &"walk_right",
+"speed": 9.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("13_lili_12")}, {"duration": 1.0, "texture": ExtResource("14_lili_13")}, {"duration": 1.0, "texture": ExtResource("15_lili_14")}, {"duration": 1.0, "texture": ExtResource("16_lili_15")}],
+"loop": true,
+"name": &"walk_left",
+"speed": 9.0
+}]
+
+[node name="Lili" type="CharacterBody2D"]
+script = ExtResource("1_lili")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visuals"]
+sprite_frames = SubResource("SpriteFramesLili")
+animation = &"idle_right"
+autoplay = "idle_right"
+position = Vector2(0, -87)
+scale = Vector2(0.32, 0.32)
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShapeLili")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShapeLili")
+
+[node name="NpcDetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NpcDetectionArea"]
+shape = SubResource("CircleShapeLili")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = true
+limit_left = 0
+limit_top = 0
+limit_right = 4128
+limit_bottom = 1024
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 5.0
+
+[connection signal="body_entered" from="NpcDetectionArea" to="." method="_on_npc_detection_area_body_entered"]
+[connection signal="body_exited" from="NpcDetectionArea" to="." method="_on_npc_detection_area_body_exited"]

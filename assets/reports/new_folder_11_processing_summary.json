@@ -1,0 +1,14 @@
+{
+  "source_images": 29,
+  "source_format": "JFIF/JPEG RGB without alpha",
+  "character_sprite_sheets": 8,
+  "object_sprite_sheets": 14,
+  "background_images": 7,
+  "character_frames_png": 151,
+  "object_images_png": 46,
+  "transparent_png_total": 197,
+  "processed_image_total": 204,
+  "background_size": "4128x1024",
+  "source_preserved_at": "assets/source/new_folder_11",
+  "backup": "backups/desa-ajaib-before-assets.zip"
+}

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/Level5.gd" id="1"]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource("1")
+level_id = &"level_5"
+level_title = "Level 5: Taman Pusat"
+lesson_text = "Peduli lingkungan"
+npc_name = "Tutu dan Momo"
+npc_color = Color(0.43, 0.66, 0.38, 1)
+npc_request = "Taman pusat desa terlihat kering dan kotor. Maukah kamu membantu kami memulihkannya?"

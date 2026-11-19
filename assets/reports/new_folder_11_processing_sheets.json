@@ -1,0 +1,1068 @@
+{
+  "source_images": 29,
+  "backgrounds": 7,
+  "processed_images": 151,
+  "transparent_images": 151,
+  "assets": [
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_01.png",
+      "width": 256,
+      "height": 544,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_02.png",
+      "width": 255,
+      "height": 542,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_03.png",
+      "width": 323,
+      "height": 544,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_04.png",
+      "width": 262,
+      "height": 539,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_05.png",
+      "width": 233,
+      "height": 542,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_06.png",
+      "width": 257,
+      "height": 539,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_07.png",
+      "width": 232,
+      "height": 542,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_08.png",
+      "width": 242,
+      "height": 511,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_09.png",
+      "width": 241,
+      "height": 511,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_10.png",
+      "width": 247,
+      "height": 508,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_11.png",
+      "width": 249,
+      "height": 509,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_12.png",
+      "width": 248,
+      "height": 510,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_13.png",
+      "width": 239,
+      "height": 509,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_14.png",
+      "width": 251,
+      "height": 511,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_15.png",
+      "width": 241,
+      "height": 511,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_16.png",
+      "width": 236,
+      "height": 314,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_17.png",
+      "width": 235,
+      "height": 314,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_18.png",
+      "width": 235,
+      "height": 314,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_19.png",
+      "width": 236,
+      "height": 236,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_20.png",
+      "width": 235,
+      "height": 236,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_21.png",
+      "width": 235,
+      "height": 236,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_22.png",
+      "width": 241,
+      "height": 236,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_23.png",
+      "width": 98,
+      "height": 253,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_24.png",
+      "width": 97,
+      "height": 254,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_25.png",
+      "width": 126,
+      "height": 250,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_26.png",
+      "width": 139,
+      "height": 251,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_2mogzx2mogzx2mog.jfif",
+      "output": "assets/characters/lili/lili_27.png",
+      "width": 79,
+      "height": 227,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_01.png",
+      "width": 255,
+      "height": 481,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_02.png",
+      "width": 255,
+      "height": 481,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_03.png",
+      "width": 261,
+      "height": 479,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_04.png",
+      "width": 344,
+      "height": 476,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_05.png",
+      "width": 282,
+      "height": 482,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_06.png",
+      "width": 261,
+      "height": 481,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_07.png",
+      "width": 284,
+      "height": 480,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_08.png",
+      "width": 279,
+      "height": 485,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_09.png",
+      "width": 267,
+      "height": 460,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_10.png",
+      "width": 289,
+      "height": 473,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_11.png",
+      "width": 276,
+      "height": 505,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_12.png",
+      "width": 279,
+      "height": 482,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_13.png",
+      "width": 267,
+      "height": 457,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_14.png",
+      "width": 288,
+      "height": 474,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_15.png",
+      "width": 264,
+      "height": 499,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_16.png",
+      "width": 255,
+      "height": 250,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_17.png",
+      "width": 254,
+      "height": 249,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_18.png",
+      "width": 254,
+      "height": 248,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4vtlrw4vtlrw4vtl.jfif",
+      "output": "assets/characters/tutu/tutu_19.png",
+      "width": 254,
+      "height": 249,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_01.png",
+      "width": 323,
+      "height": 486,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_02.png",
+      "width": 323,
+      "height": 485,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_03.png",
+      "width": 332,
+      "height": 488,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_04.png",
+      "width": 345,
+      "height": 488,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_05.png",
+      "width": 332,
+      "height": 488,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_06.png",
+      "width": 387,
+      "height": 487,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_07.png",
+      "width": 303,
+      "height": 471,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_08.png",
+      "width": 294,
+      "height": 451,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_09.png",
+      "width": 307,
+      "height": 459,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_10.png",
+      "width": 307,
+      "height": 473,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_11.png",
+      "width": 300,
+      "height": 472,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_12.png",
+      "width": 295,
+      "height": 451,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_13.png",
+      "width": 315,
+      "height": 459,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_14.png",
+      "width": 302,
+      "height": 473,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_15.png",
+      "width": 373,
+      "height": 330,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_16.png",
+      "width": 376,
+      "height": 329,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_17.png",
+      "width": 375,
+      "height": 329,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_709gyl709gyl709g.jfif",
+      "output": "assets/characters/villagers/hedgehog/hedgehog_18.png",
+      "width": 375,
+      "height": 330,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_01.png",
+      "width": 299,
+      "height": 489,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_02.png",
+      "width": 297,
+      "height": 488,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_03.png",
+      "width": 323,
+      "height": 490,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_04.png",
+      "width": 351,
+      "height": 489,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_05.png",
+      "width": 363,
+      "height": 492,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_06.png",
+      "width": 266,
+      "height": 483,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_07.png",
+      "width": 294,
+      "height": 484,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_08.png",
+      "width": 276,
+      "height": 483,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_09.png",
+      "width": 319,
+      "height": 496,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_10.png",
+      "width": 309,
+      "height": 473,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_11.png",
+      "width": 333,
+      "height": 490,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_12.png",
+      "width": 335,
+      "height": 512,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_13.png",
+      "width": 318,
+      "height": 495,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_14.png",
+      "width": 308,
+      "height": 471,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_15.png",
+      "width": 344,
+      "height": 488,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_16.png",
+      "width": 321,
+      "height": 503,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_17.png",
+      "width": 285,
+      "height": 285,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_18.png",
+      "width": 284,
+      "height": 284,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_70i53h70i53h70i5.jfif",
+      "output": "assets/characters/momo/momo_19.png",
+      "width": 287,
+      "height": 285,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_01.png",
+      "width": 286,
+      "height": 506,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_02.png",
+      "width": 299,
+      "height": 503,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_03.png",
+      "width": 351,
+      "height": 504,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_04.png",
+      "width": 325,
+      "height": 503,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_05.png",
+      "width": 233,
+      "height": 505,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_06.png",
+      "width": 326,
+      "height": 501,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_07.png",
+      "width": 281,
+      "height": 506,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_08.png",
+      "width": 273,
+      "height": 481,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_09.png",
+      "width": 289,
+      "height": 483,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_10.png",
+      "width": 282,
+      "height": 521,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_11.png",
+      "width": 279,
+      "height": 505,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_12.png",
+      "width": 273,
+      "height": 479,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_13.png",
+      "width": 273,
+      "height": 494,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_14.png",
+      "width": 278,
+      "height": 509,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_15.png",
+      "width": 314,
+      "height": 285,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_16.png",
+      "width": 315,
+      "height": 285,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_a6hmnva6hmnva6hm.jfif",
+      "output": "assets/characters/villagers/deer/deer_17.png",
+      "width": 323,
+      "height": 286,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_01.png",
+      "width": 236,
+      "height": 504,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_02.png",
+      "width": 237,
+      "height": 504,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_03.png",
+      "width": 308,
+      "height": 502,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_04.png",
+      "width": 245,
+      "height": 501,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_05.png",
+      "width": 221,
+      "height": 504,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_06.png",
+      "width": 246,
+      "height": 503,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_07.png",
+      "width": 221,
+      "height": 504,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_08.png",
+      "width": 243,
+      "height": 497,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_09.png",
+      "width": 241,
+      "height": 479,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_10.png",
+      "width": 243,
+      "height": 491,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_11.png",
+      "width": 241,
+      "height": 505,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_12.png",
+      "width": 243,
+      "height": 496,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_13.png",
+      "width": 240,
+      "height": 478,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_14.png",
+      "width": 235,
+      "height": 484,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_15.png",
+      "width": 230,
+      "height": 503,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_16.png",
+      "width": 238,
+      "height": 311,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_17.png",
+      "width": 237,
+      "height": 310,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_18.png",
+      "width": 239,
+      "height": 315,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_amuuzwamuuzwamuu.jfif",
+      "output": "assets/characters/villagers/rabbit/rabbit_villager_19.png",
+      "width": 264,
+      "height": 257,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_01.png",
+      "width": 367,
+      "height": 467,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_02.png",
+      "width": 390,
+      "height": 467,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_03.png",
+      "width": 436,
+      "height": 467,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_04.png",
+      "width": 278,
+      "height": 465,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_05.png",
+      "width": 364,
+      "height": 467,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_06.png",
+      "width": 312,
+      "height": 464,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_07.png",
+      "width": 330,
+      "height": 470,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_08.png",
+      "width": 315,
+      "height": 451,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_09.png",
+      "width": 656,
+      "height": 492,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_10.png",
+      "width": 630,
+      "height": 471,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_11.png",
+      "width": 672,
+      "height": 487,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_12.png",
+      "width": 254,
+      "height": 267,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_13.png",
+      "width": 252,
+      "height": 268,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_bd5q4bd5q4bd5q4b.jfif",
+      "output": "assets/characters/villagers/squirrel/squirrel_14.png",
+      "width": 254,
+      "height": 268,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_01.png",
+      "width": 288,
+      "height": 437,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_02.png",
+      "width": 289,
+      "height": 437,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_03.png",
+      "width": 378,
+      "height": 437,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_04.png",
+      "width": 372,
+      "height": 437,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_05.png",
+      "width": 261,
+      "height": 443,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_06.png",
+      "width": 317,
+      "height": 431,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_07.png",
+      "width": 261,
+      "height": 443,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_08.png",
+      "width": 304,
+      "height": 434,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_09.png",
+      "width": 305,
+      "height": 409,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_10.png",
+      "width": 299,
+      "height": 435,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_11.png",
+      "width": 286,
+      "height": 468,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_12.png",
+      "width": 304,
+      "height": 433,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_13.png",
+      "width": 306,
+      "height": 407,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_14.png",
+      "width": 298,
+      "height": 434,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_15.png",
+      "width": 286,
+      "height": 467,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_16.png",
+      "width": 284,
+      "height": 302,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_17.png",
+      "width": 285,
+      "height": 302,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s3ueevs3ueevs3ue.jfif",
+      "output": "assets/characters/villagers/bird/bird_18.png",
+      "width": 285,
+      "height": 302,
+      "alpha": true
+    }
+  ],
+  "groups": [
+    "sheets"
+  ]
+}

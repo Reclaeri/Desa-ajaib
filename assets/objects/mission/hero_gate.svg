@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="190" viewBox="0 0 160 190">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d99a4c"/>
+      <stop offset="1" stop-color="#8f542f"/>
+    </linearGradient>
+    <linearGradient id="door" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#74c77a"/>
+      <stop offset="1" stop-color="#3f8d59"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="80" cy="178" rx="62" ry="9" fill="#3b2b25" opacity=".25"/>
+  <path d="M20 176V72L80 22l60 50v104" fill="url(#wood)" stroke="#4b2d24" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M42 176V88h76v88" fill="url(#door)" stroke="#4b2d24" stroke-width="6"/>
+  <path d="M80 22 145 72H15z" fill="#f1bd5a" stroke="#4b2d24" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M80 39v35M48 72l32-33 32 33" fill="none" stroke="#ffe18b" stroke-width="5" opacity=".75"/>
+  <circle cx="102" cy="132" r="6" fill="#ffe18b" stroke="#4b2d24" stroke-width="3"/>
+  <path d="M30 101h-12M142 101h-12M30 126h-12M142 126h-12" stroke="#f8d67b" stroke-width="7" stroke-linecap="round"/>
+  <path d="M80 54c-9-13-27-2-20 10 7 12 20 18 20 18s13-6 20-18c7-12-11-23-20-10z" fill="#ff8e98" stroke="#6a3b3b" stroke-width="3"/>
+</svg>

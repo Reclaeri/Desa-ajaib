@@ -1,0 +1,333 @@
+{
+  "source_images": 29,
+  "backgrounds": 7,
+  "processed_images": 46,
+  "transparent_images": 46,
+  "assets": [
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_1qcitc1qcitc1qci.jfif",
+      "output": "assets/objects/drinks/obj_juice_01.png",
+      "width": 375,
+      "height": 473,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_1qcitc1qcitc1qci.jfif",
+      "output": "assets/objects/drinks/obj_juice_02.png",
+      "width": 373,
+      "height": 472,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_1qcitc1qcitc1qci.jfif",
+      "output": "assets/objects/drinks/obj_juice_03.png",
+      "width": 375,
+      "height": 472,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_26gszo26gszo26gs.jfif",
+      "output": "assets/objects/food/obj_strawberry_01.png",
+      "width": 306,
+      "height": 674,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_26gszo26gszo26gs.jfif",
+      "output": "assets/objects/food/obj_strawberry_02.png",
+      "width": 539,
+      "height": 664,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_26gszo26gszo26gs.jfif",
+      "output": "assets/objects/food/obj_strawberry_03.png",
+      "width": 263,
+      "height": 668,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_01.png",
+      "width": 299,
+      "height": 154,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_02.png",
+      "width": 295,
+      "height": 155,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_03.png",
+      "width": 135,
+      "height": 183,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_04.png",
+      "width": 137,
+      "height": 185,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_05.png",
+      "width": 138,
+      "height": 183,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_06.png",
+      "width": 308,
+      "height": 169,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_07.png",
+      "width": 295,
+      "height": 190,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_08.png",
+      "width": 160,
+      "height": 145,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_09.png",
+      "width": 161,
+      "height": 147,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_10.png",
+      "width": 161,
+      "height": 147,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_11.png",
+      "width": 280,
+      "height": 126,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_12.png",
+      "width": 279,
+      "height": 127,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_13.png",
+      "width": 162,
+      "height": 125,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_14.png",
+      "width": 163,
+      "height": 125,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_4kghgl4kghgl4kgh.jfif",
+      "output": "assets/objects/tableware/obj_tableware_15.png",
+      "width": 163,
+      "height": 125,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_5iir9p5iir9p5iir.jfif",
+      "output": "assets/objects/decorations/decor_bush_01.png",
+      "width": 1978,
+      "height": 1375,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_avrmvdavrmvdavrm.jfif",
+      "output": "assets/objects/bridge/obj_wood_01.png",
+      "width": 626,
+      "height": 172,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_avrmvdavrmvdavrm.jfif",
+      "output": "assets/objects/bridge/obj_wood_02.png",
+      "width": 533,
+      "height": 219,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_avrmvdavrmvdavrm.jfif",
+      "output": "assets/objects/bridge/obj_wood_03.png",
+      "width": 728,
+      "height": 244,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_avrmvdavrmvdavrm.jfif",
+      "output": "assets/objects/bridge/obj_wood_04.png",
+      "width": 215,
+      "height": 312,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_chhakvchhakvchha.jfif",
+      "output": "assets/objects/garden/obj_trash_01.png",
+      "width": 243,
+      "height": 221,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_chhakvchhakvchha.jfif",
+      "output": "assets/objects/garden/obj_trash_02.png",
+      "width": 263,
+      "height": 185,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_chhakvchhakvchha.jfif",
+      "output": "assets/objects/garden/obj_trash_03.png",
+      "width": 274,
+      "height": 221,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_chhakvchhakvchha.jfif",
+      "output": "assets/objects/garden/obj_trash_04.png",
+      "width": 256,
+      "height": 162,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_eo7gpfeo7gpfeo7g.jfif",
+      "output": "assets/objects/garden/obj_watering_can_01.png",
+      "width": 855,
+      "height": 624,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_hemg2nhemg2nhemg.jfif",
+      "output": "assets/objects/food/obj_cake_01.png",
+      "width": 307,
+      "height": 638,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_hemg2nhemg2nhemg.jfif",
+      "output": "assets/objects/food/obj_cake_02.png",
+      "width": 428,
+      "height": 399,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_hemg2nhemg2nhemg.jfif",
+      "output": "assets/objects/food/obj_cake_03.png",
+      "width": 356,
+      "height": 658,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_k5jmjak5jmjak5jm.jfif",
+      "output": "assets/objects/garden/obj_dry_branch_01.png",
+      "width": 1223,
+      "height": 616,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_riirrzriirrzriir.jfif",
+      "output": "assets/objects/mission/obj_basket_01.png",
+      "width": 581,
+      "height": 579,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_rkdcyrkdcyrkdcyr.jfif",
+      "output": "assets/objects/mission/obj_fruit_basket_01.png",
+      "width": 1426,
+      "height": 1402,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s7r7yqs7r7yqs7r7.jfif",
+      "output": "assets/objects/food/obj_bread_01.png",
+      "width": 382,
+      "height": 254,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s7r7yqs7r7yqs7r7.jfif",
+      "output": "assets/objects/food/obj_bread_02.png",
+      "width": 467,
+      "height": 228,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_s7r7yqs7r7yqs7r7.jfif",
+      "output": "assets/objects/food/obj_bread_03.png",
+      "width": 303,
+      "height": 300,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_t64hedt64hedt64h.jfif",
+      "output": "assets/objects/bridge/obj_rope_01.png",
+      "width": 687,
+      "height": 537,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_t64hedt64hedt64h.jfif",
+      "output": "assets/objects/bridge/obj_rope_02.png",
+      "width": 426,
+      "height": 85,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_ujw848ujw848ujw8.jfif",
+      "output": "assets/objects/food/obj_fruit_01.png",
+      "width": 580,
+      "height": 662,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_ujw848ujw848ujw8.jfif",
+      "output": "assets/objects/food/obj_fruit_02.png",
+      "width": 593,
+      "height": 688,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_ujw848ujw848ujw8.jfif",
+      "output": "assets/objects/food/obj_fruit_03.png",
+      "width": 582,
+      "height": 646,
+      "alpha": true
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_ujw848ujw848ujw8.jfif",
+      "output": "assets/objects/food/obj_fruit_04.png",
+      "width": 484,
+      "height": 704,
+      "alpha": true
+    }
+  ],
+  "groups": [
+    "objects"
+  ]
+}

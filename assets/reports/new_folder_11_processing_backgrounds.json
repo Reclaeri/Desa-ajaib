@@ -1,0 +1,60 @@
+{
+  "source_images": 29,
+  "backgrounds": 7,
+  "processed_images": 7,
+  "transparent_images": 0,
+  "assets": [
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_b87p6gb87p6gb87p.jfif",
+      "output": "assets/backgrounds/bg_level_01_forest.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_iwmvxbiwmvxbiwmv.jfif",
+      "output": "assets/backgrounds/bg_level_02_meadow.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_cdyd2scdyd2scdyd.jfif",
+      "output": "assets/backgrounds/bg_level_03_river.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_ewfs7iewfs7iewfs.jfif",
+      "output": "assets/backgrounds/bg_level_04_festival.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_yzlconyzlconyzlc.jfif",
+      "output": "assets/backgrounds/bg_level_05_garden_dirty.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_jia4s5jia4s5jia4.jfif",
+      "output": "assets/backgrounds/bg_level_05_garden_clean.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "source": "assets/source/new_folder_11/New folder (4)/Gemini_Generated_Image_lsyr3mlsyr3mlsyr.jfif",
+      "output": "assets/backgrounds/bg_ending_village.png",
+      "width": 4128,
+      "height": 1024,
+      "alpha": false
+    }
+  ],
+  "groups": [
+    "backgrounds"
+  ]
+}

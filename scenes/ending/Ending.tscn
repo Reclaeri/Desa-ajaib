@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/Ending.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_ending_village.png" id="2_background"]
+
+[node name="Ending" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_background")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="DimOverlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.12, 0.13, 0.06)
+mouse_filter = 2
+
+[node name="TrophyPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 260.0
+offset_top = 45.0
+offset_right = 1020.0
+offset_bottom = 675.0
+
+[node name="Content" type="VBoxContainer" parent="TrophyPanel"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="Title" type="PanelContainer" parent="TrophyPanel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 74)
+layout_mode = 2
+
+[node name="TitleText" type="Label" parent="TrophyPanel/Content/Title"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Pesta Sahabat Desa Ajaib"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stars" type="HBoxContainer" parent="TrophyPanel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 124)
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 14
+
+[node name="Award" type="PanelContainer" parent="TrophyPanel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+
+[node name="AwardText" type="Label" parent="TrophyPanel/Content/Award"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="TrophyPanel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Kamu berhasil menyelesaikan petualangan di Desa Ajaib!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="TrophyPanel/Content"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 18
+
+[node name="PlayAgainButton" type="Button" parent="TrophyPanel/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(286, 78)
+layout_mode = 2
+text = ""
+
+[node name="MenuButton" type="Button" parent="TrophyPanel/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(316, 78)
+layout_mode = 2
+text = ""
+
+[connection signal="pressed" from="TrophyPanel/Content/Buttons/PlayAgainButton" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="TrophyPanel/Content/Buttons/MenuButton" to="." method="_on_menu_pressed"]
