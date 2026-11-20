@@ -17,16 +17,20 @@ func _ready() -> void:
 	_build_reference_menu()
 	_build_popup()
 	_style_menu_buttons()
+	get_viewport().size_changed.connect(_layout_reference_menu)
+	_layout_reference_menu()
 
 
 func _build_reference_menu() -> void:
 	# Use the supplied finished village illustration as the menu backdrop.
 	var village_background := get_node_or_null("VillageBackground") as TextureRect
 	if village_background != null:
-		village_background.texture = load("res://assets/ui/main_menu_reference/fantasy_village_menu.png")
+		village_background.texture = load("res://assets/ui/main_menu_reference/Investakidz Magical Village Menu.png")
 		village_background.visible = true
 		village_background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		village_background.stretch_mode = TextureRect.STRETCH_SCALE
+		# Show the complete supplied menu art on every aspect ratio. On wide
+		# phones this leaves slim side margins rather than cropping the artwork.
+		village_background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	for node_name in ["Sky", "Atmosphere", "Meadow", "MenuSafeShade", "CloudLeft", "CloudRight"]:
 		var node := get_node_or_null(node_name) as Control
 		if node != null:
@@ -40,21 +44,43 @@ func _build_reference_menu() -> void:
 	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	root.mouse_filter = Control.MOUSE_FILTER_PASS
 	add_child(root)
-	# Coordinates follow the project's 1280x720 design canvas. Do not scale
-	# them by the embedded editor viewport; that makes the buttons oversized.
-	var button_width := 440.0
-	var button_height := 98.0
-	var button_x := 145.0
-	var button_y := 290.0
-	var button_gap := 6.0
-	var play_button := _add_reference_button(root, "res://assets/ui/main_menu_reference/play.png", Rect2(button_x, button_y, button_width, button_height), _on_start_pressed, true)
-	_add_reference_button(root, "res://assets/ui/main_menu_reference/settings.png", Rect2(button_x, button_y + (button_height + button_gap), button_width, button_height), _on_settings_pressed, true)
-	_add_reference_button(root, "res://assets/ui/sheet/buttons/button_guide.png", Rect2(button_x, button_y + 2.0 * (button_height + button_gap), button_width, button_height), _on_guide_pressed, true)
-	_add_reference_button(root, "res://assets/ui/main_menu_reference/exit.png", Rect2(button_x, button_y + 3.0 * (button_height + button_gap), button_width, button_height), _on_exit_pressed, true)
-	_add_reference_button(root, "", Rect2(975, 18, 82, 82), _on_settings_pressed, true)
-	_add_reference_button(root, "", Rect2(1065, 18, 82, 82), _toggle_music, true)
-	_add_reference_button(root, "", Rect2(1155, 18, 82, 82), _on_exit_pressed, true)
+	# Hit areas are positioned by _layout_reference_menu for the current viewport.
+	var play_button := _add_reference_button(root, "res://assets/ui/main_menu_reference/play.png", Rect2(), _on_start_pressed, true)
+	_add_reference_button(root, "res://assets/ui/main_menu_reference/settings.png", Rect2(), _on_settings_pressed, true)
+	_add_reference_button(root, "res://assets/ui/sheet/buttons/button_guide.png", Rect2(), _on_guide_pressed, true)
+	_add_reference_button(root, "res://assets/ui/main_menu_reference/exit.png", Rect2(), _on_exit_pressed, true)
+	_add_reference_button(root, "", Rect2(), _on_settings_pressed, true)
+	_add_reference_button(root, "", Rect2(), _toggle_music, true)
+	_add_reference_button(root, "", Rect2(), _on_exit_pressed, true)
+	play_button.set_meta("reference_menu_button", 0)
 	play_button.grab_focus()
+	_layout_reference_menu()
+
+
+func _layout_reference_menu() -> void:
+	var root := get_node_or_null("ReferenceMenu") as Control
+	if root == null or root.get_child_count() < 14:
+		return
+	var viewport_size := get_viewport_rect().size
+	# Scale the 1280x720 design as a single unit so all controls stay visible
+	# and keep their proportions in short landscape viewports.
+	var scale_factor := minf(viewport_size.x / 1280.0, viewport_size.y / 720.0)
+	var x_offset := (viewport_size.x - 1280.0 * scale_factor) * 0.5
+	var y_offset := (viewport_size.y - 720.0 * scale_factor) * 0.5
+	var button_width := 440.0 * scale_factor
+	var button_height := 98.0 * scale_factor
+	var button_x := x_offset + 145.0 * scale_factor
+	var button_y := y_offset + 290.0 * scale_factor
+	var button_gap := 6.0 * scale_factor
+	var rects: Array[Rect2] = []
+	for index in range(4):
+		rects.append(Rect2(button_x, button_y + index * (button_height + button_gap), button_width, button_height))
+	for index in range(3):
+		rects.append(Rect2(x_offset + (975.0 + index * 90.0) * scale_factor, y_offset + 18.0 * scale_factor, 82.0 * scale_factor, 82.0 * scale_factor))
+	for index in range(7):
+		var hit_button := root.get_child(index * 2 + 1) as Control
+		hit_button.position = rects[index].position
+		hit_button.size = rects[index].size
 
 
 func _add_reference_button(parent: Control, texture_path: String, rect: Rect2, callback: Callable, enabled: bool) -> Button:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0vxos65xxges"
-path="res://.godot/imported/fence.png-7c2172fa4bf4dc5ed6d83340ff982904.ctex"
+uid="uid://b58jh35coax0h"
+path="res://.godot/imported/Investakidz Magical Village Menu.png-a5655e66de964a40cfbdd7ea8c979838.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/sheet/decorations/fence.png"
-dest_files=["res://.godot/imported/fence.png-7c2172fa4bf4dc5ed6d83340ff982904.ctex"]
+source_file="res://assets/ui/main_menu_reference/Investakidz Magical Village Menu.png"
+dest_files=["res://.godot/imported/Investakidz Magical Village Menu.png-a5655e66de964a40cfbdd7ea8c979838.ctex"]
 
 [params]
 
