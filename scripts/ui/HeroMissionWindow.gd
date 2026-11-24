@@ -571,7 +571,7 @@ func _build_level_3() -> void:
 func _build_level_4() -> void:
 	var served: Array = state.get("served", [false, false, false, false, false])
 	var food_paths := ["res://assets/objects/food/obj_cake_01.png", "res://assets/objects/food/obj_bread_01.png", "res://assets/objects/food/obj_fruit_01.png", "res://assets/objects/drinks/obj_juice_01.png", "res://assets/objects/food/obj_bread_01.png"]
-	_add_section_label("MAKANAN  -  BAGIKAN KE WARGA", Vector2(32, 4), Vector2(430, 26))
+	_add_section_label("MAKANAN DAN MINUMAN  -  BAGIKAN KE WARGA", Vector2(32, 4), Vector2(620, 26))
 	for index in 5:
 		var column_x := 86.0 + index * 180.0
 		_add_target(Vector2(column_x, 58), Vector2(160, 92), "food_%d" % index, Color("f5ddb1"), true)
@@ -874,6 +874,8 @@ func _target_hint(target_id: String) -> String:
 		return "%d. PAPAN" % (int(target_id.trim_prefix("board_")) + 1)
 	if target_id.begins_with("rope"):
 		return "%d. TALI" % (int(target_id.trim_prefix("rope_")) + 1)
+	if target_id == "food_3":
+		return "4. MINUMAN"
 	if target_id.begins_with("food"):
 		return "%d. MAKANAN" % (int(target_id.trim_prefix("food_")) + 1)
 	if target_id.begins_with("decor"):
