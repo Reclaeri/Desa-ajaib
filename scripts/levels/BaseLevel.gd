@@ -131,8 +131,15 @@ func _build_interface() -> void:
 	top_bar.name = "GameplayTopBar"
 	gameplay_top_bar = top_bar
 	top_bar.color = Color("163350")
-	top_bar.position = Vector2(0, 0)
-	top_bar.size = Vector2(1280, 82)
+	# Lebar penuh mengikuti layar (penting di web, rasio layar bisa lebih lebar dari 1280).
+	top_bar.anchor_left = 0.0
+	top_bar.anchor_right = 1.0
+	top_bar.anchor_top = 0.0
+	top_bar.anchor_bottom = 0.0
+	top_bar.offset_left = 0.0
+	top_bar.offset_right = 0.0
+	top_bar.offset_top = 0.0
+	top_bar.offset_bottom = 82.0
 	hud.add_child(top_bar)
 	var title := Label.new()
 	title.text = "%s — %s" % [level_title, lesson_text]
@@ -146,8 +153,13 @@ func _build_interface() -> void:
 	mission_label.add_theme_font_size_override("font_size", 17)
 	top_bar.add_child(mission_label)
 	mission_hud_progress = ProgressBar.new()
-	mission_hud_progress.position = Vector2(962, 55)
-	mission_hud_progress.size = Vector2(260, 14)
+	# Menempel ke sisi kanan bar.
+	mission_hud_progress.anchor_left = 1.0
+	mission_hud_progress.anchor_right = 1.0
+	mission_hud_progress.offset_left = -318.0
+	mission_hud_progress.offset_right = -58.0
+	mission_hud_progress.offset_top = 55.0
+	mission_hud_progress.offset_bottom = 69.0
 	mission_hud_progress.show_percentage = false
 	mission_hud_progress.visible = false
 	var mission_track := StyleBoxFlat.new()
@@ -163,8 +175,13 @@ func _build_interface() -> void:
 	pause_button.texture_normal = load("res://assets/ui/sheet/icons/icon_pause.png")
 	pause_button.ignore_texture_size = true
 	pause_button.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED
-	pause_button.position = Vector2(1190, 16)
-	pause_button.size = Vector2(64, 48)
+	# Menempel ke sisi kanan bar.
+	pause_button.anchor_left = 1.0
+	pause_button.anchor_right = 1.0
+	pause_button.offset_left = -90.0
+	pause_button.offset_right = -26.0
+	pause_button.offset_top = 16.0
+	pause_button.offset_bottom = 64.0
 	_add_button_hover_effect(pause_button)
 	pause_button.pressed.connect(_toggle_pause)
 	top_bar.add_child(pause_button)
