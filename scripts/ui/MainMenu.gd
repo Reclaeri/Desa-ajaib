@@ -279,7 +279,57 @@ func _add_guide_key(container: HBoxContainer, key_text: String, key_color: Color
 
 
 func _on_exit_pressed() -> void:
+	# Di browser, get_tree().quit() menghentikan engine sehingga game membeku.
+	# Jadi di web tampilkan layar perpisahan, bukan quit.
+	if OS.has_feature("web"):
+		_show_web_goodbye()
+		return
 	get_tree().quit()
+
+
+func _show_web_goodbye() -> void:
+	if get_node_or_null("WebGoodbye") != null:
+		return
+	AudioManager.stop_music()
+	var overlay := ColorRect.new()
+	overlay.name = "WebGoodbye"
+	overlay.color = Color(0.03, 0.05, 0.06, 0.82)
+	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+	overlay.z_index = 100
+	add_child(overlay)
+	var panel := PanelContainer.new()
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color("fff1cf")
+	style.border_color = Color("9a7047")
+	style.set_border_width_all(4)
+	style.set_corner_radius_all(26)
+	style.content_margin_left = 48
+	style.content_margin_right = 48
+	style.content_margin_top = 36
+	style.content_margin_bottom = 36
+	panel.add_theme_stylebox_override("panel", style)
+	overlay.add_child(panel)
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation", 22)
+	panel.add_child(box)
+	var message := Label.new()
+	message.text = "Terima kasih sudah bermain!\nSampai jumpa lagi, ya.\n\nKamu boleh menutup tab ini."
+	message.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	message.add_theme_font_size_override("font_size", 28)
+	message.add_theme_color_override("font_color", Color("4b3427"))
+	box.add_child(message)
+	var back_button := Button.new()
+	back_button.text = "KEMBALI KE MENU"
+	back_button.custom_minimum_size = Vector2(300, 60)
+	back_button.add_theme_font_size_override("font_size", 22)
+	back_button.pressed.connect(func() -> void:
+		overlay.queue_free()
+		if not music_muted:
+			AudioManager.play_full_game_music()
+	)
+	box.add_child(back_button)
+	panel.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 
 
 func _toggle_music() -> void:
