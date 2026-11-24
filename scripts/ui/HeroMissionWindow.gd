@@ -8,6 +8,10 @@ signal closed
 const ITEM_SIZE := Vector2(92, 92)
 const CHARACTER_SIZE := Vector2(180, 230)
 const DRAG_BOUNDS := Rect2(150, 185, 980, 350)
+# Level 2 "Berbagi Itu Indah": ubah angka ini saja, semua teks, slot, dan progress ikut menyesuaikan.
+const SHARE_PER_CHILD := 3
+const LEVEL_2_TOTAL := SHARE_PER_CHILD * 2
+const STRAWBERRY_PATH := "res://assets/objects/food/obj_strawberry_01.png"
 
 var level_id := &""
 var mission_title := ""
@@ -17,6 +21,7 @@ var current_progress := 0
 var state: Dictionary = {}
 var item_nodes: Array[HeroDragItem] = []
 var target_nodes: Array[Panel] = []
+var section_label_nodes: Array[Label] = []
 var target_rects: Array[Rect2] = []
 var target_ids: Array[String] = []
 var progress_label: Label
@@ -37,6 +42,11 @@ var tutorial_demo_item: Sprite2D
 var tutorial_hand_tween: Tween
 var tutorial_text_label: Label
 var tutorial_demo_label: Label
+var tutorial_demo_label2: Label
+var tutorial_demo_target: Panel
+var tutorial_demo_target2: Panel
+var level2_slots := {"lili": [], "tutu": []}
+var slot_nodes: Array[Panel] = []
 var built := false
 
 
@@ -52,7 +62,12 @@ func open_mission(new_level_id: StringName, title: String, instruction: String, 
 	mission_instruction = instruction
 	current_progress = starting_progress
 	state = saved_state.duplicate(true)
-	target_progress = 6 if level_id in [&"level_2", &"level_3"] else 9
+	if level_id == &"level_2":
+		target_progress = LEVEL_2_TOTAL
+	elif level_id == &"level_3":
+		target_progress = 6
+	else:
+		target_progress = 9
 	_clear_items()
 	title_label.text = mission_title
 	_update_instruction_text()
@@ -291,6 +306,20 @@ func _build_shell() -> void:
 	tutorial_demo_label.add_theme_font_size_override("font_size", 13)
 	tutorial_demo_label.add_theme_color_override("font_color", Color("55714f"))
 	demo_target.add_child(tutorial_demo_label)
+	tutorial_demo_target = demo_target
+	tutorial_demo_target2 = Panel.new()
+	tutorial_demo_target2.position = Vector2(52, 168)
+	tutorial_demo_target2.size = Vector2(128, 92)
+	tutorial_demo_target2.add_theme_stylebox_override("panel", demo_style)
+	tutorial_demo_target2.visible = false
+	tutorial_panel.add_child(tutorial_demo_target2)
+	tutorial_demo_label2 = Label.new()
+	tutorial_demo_label2.position = Vector2(8, 34)
+	tutorial_demo_label2.size = Vector2(112, 24)
+	tutorial_demo_label2.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	tutorial_demo_label2.add_theme_font_size_override("font_size", 13)
+	tutorial_demo_label2.add_theme_color_override("font_color", Color("55714f"))
+	tutorial_demo_target2.add_child(tutorial_demo_label2)
 	tutorial_demo_item = Sprite2D.new()
 	var demo_texture: Texture2D = load("res://assets/objects/food/obj_strawberry_01.png") as Texture2D
 	tutorial_demo_item.texture = demo_texture
@@ -332,7 +361,10 @@ func _start_activity() -> void:
 		tutorial_hand_tween.kill()
 	tutorial_panel.visible = false
 	interaction_area.modulate.a = 1.0
-	status_label.text = "Ayo mulai! Seret gambar ke kotak hijau yang sesuai."
+	if level_id == &"level_2":
+		status_label.text = "Ayo mulai! %s" % level_2_instruction()
+	else:
+		status_label.text = "Ayo mulai! Seret gambar ke kotak hijau yang sesuai."
 
 
 func _configure_tutorial_for_level() -> void:
@@ -341,8 +373,8 @@ func _configure_tutorial_for_level() -> void:
 	var target_name := "LILI atau TUTU"
 	if level_id == &"level_3":
 		asset_path = "res://assets/objects/bridge/obj_wood_01.png"
-		object_name = "papan 1, 2, 3, lalu 4"
-		target_name = "kotak papan bernomor"
+		object_name = "3 papan dan 1 batang kayu"
+		target_name = "kotak bernomor yang sesuai"
 	elif level_id == &"level_4":
 		asset_path = "res://assets/objects/food/obj_cake_01.png"
 		object_name = "makanan"
@@ -352,9 +384,19 @@ func _configure_tutorial_for_level() -> void:
 		object_name = "benih"
 		target_name = "lubang tanah"
 	if tutorial_text_label != null:
-		tutorial_text_label.text = "Contoh cara bermain:\nGeser %s ke %s." % [object_name, target_name]
+		if level_id == &"level_2":
+			tutorial_text_label.text = "Bagi %d stroberi sama banyak:\n%d untuk Lili, %d untuk Tutu." % [LEVEL_2_TOTAL, SHARE_PER_CHILD, SHARE_PER_CHILD]
+		else:
+			tutorial_text_label.text = "Contoh cara bermain:\nGeser %s ke %s." % [object_name, target_name]
+	if tutorial_demo_target != null:
+		var demo_y := 150.0 if level_id == &"level_2" else 168.0
+		tutorial_demo_target.position = Vector2(430, demo_y)
+		tutorial_demo_target2.position = Vector2(52, demo_y)
+		tutorial_demo_target2.visible = level_id == &"level_2"
 	if tutorial_demo_label != null:
-		tutorial_demo_label.text = "LEPAS DI SINI"
+		tutorial_demo_label.text = "TUTU" if level_id == &"level_2" else "LEPAS DI SINI"
+	if tutorial_demo_label2 != null:
+		tutorial_demo_label2.text = "LILI"
 	if tutorial_demo_item != null:
 		tutorial_demo_item.texture = load(asset_path) as Texture2D
 		var demo_texture: Texture2D = tutorial_demo_item.texture
@@ -368,6 +410,9 @@ func _start_hand_tutorial() -> void:
 		return
 	if tutorial_hand_tween != null and tutorial_hand_tween.is_valid():
 		tutorial_hand_tween.kill()
+	if level_id == &"level_2":
+		_start_level_2_hand_tutorial()
+		return
 	tutorial_hand.position = Vector2(145, 178)
 	tutorial_demo_item.position = Vector2(170, 210)
 	tutorial_hand_tween = create_tween().set_loops()
@@ -380,19 +425,133 @@ func _start_hand_tutorial() -> void:
 	tutorial_hand_tween.tween_interval(0.45)
 
 
+func _start_level_2_hand_tutorial() -> void:
+	var start_hand := Vector2(268, 140)
+	var start_item := Vector2(300, 178)
+	tutorial_hand.position = start_hand
+	tutorial_demo_item.position = start_item
+	tutorial_hand_tween = create_tween().set_loops()
+	tutorial_hand_tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	for destination in [Vector2(116, 196), Vector2(494, 196)]:
+		tutorial_hand_tween.tween_property(tutorial_hand, "position", destination + Vector2(-32, -38), 0.9)
+		tutorial_hand_tween.parallel().tween_property(tutorial_demo_item, "position", destination, 0.9)
+		tutorial_hand_tween.tween_interval(0.5)
+		tutorial_hand_tween.tween_callback(func() -> void:
+			tutorial_hand.position = start_hand
+			tutorial_demo_item.position = start_item
+		)
+		tutorial_hand_tween.tween_interval(0.3)
+
+
+func level_2_instruction() -> String:
+	return "Bagi %d stroberi sama banyak: %d untuk Lili, %d untuk Tutu." % [LEVEL_2_TOTAL, SHARE_PER_CHILD, SHARE_PER_CHILD]
+
+
 func _build_level_2() -> void:
-	_add_target(Vector2(80, 10), Vector2(310, 262), "lili", Color("d9efc7"))
-	_add_target(Vector2(662, 10), Vector2(310, 262), "tutu", Color("d9efc7"))
-	_add_character("res://assets/characters/lili/lili_16.png", "LILI", Vector2(145, 10), "lili")
-	_add_character("res://assets/characters/tutu/tutu_16.png", "TUTU", Vector2(727, 10), "tutu")
-	var lili_count := int(state.get("lili_count", 0))
-	var tutu_count := int(state.get("tutu_count", 0))
-	for index in 6:
-		var target_id := "lili" if index % 2 == 0 else "tutu"
-		var received := lili_count if target_id == "lili" else tutu_count
-		if index / 2 < received:
+	var lili_count := clampi(int(state.get("lili_count", 0)), 0, SHARE_PER_CHILD)
+	var tutu_count := clampi(int(state.get("tutu_count", 0)), 0, SHARE_PER_CHILD)
+	var lili_x := 80.0
+	var tutu_x := 662.0
+	_add_target(Vector2(lili_x, 10), Vector2(310, 262), "lili", Color("d9efc7"))
+	_add_target(Vector2(tutu_x, 10), Vector2(310, 262), "tutu", Color("d9efc7"))
+	_add_character("res://assets/characters/lili/lili_16.png", "LILI", Vector2(lili_x + 12, 10), "lili")
+	_add_character("res://assets/characters/tutu/tutu_16.png", "TUTU", Vector2(tutu_x + 12, 10), "tutu")
+	_add_level_2_slots("lili", lili_x, lili_count)
+	_add_level_2_slots("tutu", tutu_x, tutu_count)
+	var remaining := LEVEL_2_TOTAL - lili_count - tutu_count
+	for index in remaining:
+		# Stroberi bebas dijatuhkan ke Lili atau Tutu (target_id kosong), tanpa lencana angka.
+		_add_item("res://assets/objects/food/obj_strawberry_%02d.png" % (index % 3 + 1), Vector2(230 + index * 100, 310), "", {"kind": "strawberry", "index": index})
+
+
+func _add_level_2_slots(target_id: String, box_x: float, filled: int) -> void:
+	var texture: Texture2D = load(STRAWBERRY_PATH) as Texture2D
+	var slots: Array = []
+	for i in SHARE_PER_CHILD:
+		var slot := Panel.new()
+		slot.position = Vector2(box_x + 222.0, 40.0 + i * 68.0)
+		slot.size = Vector2(60, 60)
+		slot.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var slot_style := StyleBoxFlat.new()
+		slot_style.bg_color = Color(1, 1, 1, 0.6)
+		slot_style.border_color = Color("6f9b67")
+		slot_style.set_border_width_all(3)
+		slot_style.set_corner_radius_all(14)
+		slot.add_theme_stylebox_override("panel", slot_style)
+		interaction_area.add_child(slot)
+		var sprite := Sprite2D.new()
+		sprite.texture = texture
+		sprite.position = slot.size * 0.5
+		var base_scale := 1.0
+		if texture != null:
+			var texture_size: Vector2 = texture.get_size()
+			base_scale = minf(46.0 / texture_size.x, 46.0 / texture_size.y)
+		sprite.scale = Vector2.ONE * base_scale
+		sprite.modulate = Color.WHITE if i < filled else Color(0.25, 0.25, 0.25, 0.28)
+		slot.add_child(sprite)
+		slot.set_meta("sprite", sprite)
+		slot.set_meta("base_scale", base_scale)
+		var number_label := Label.new()
+		number_label.text = str(i + 1)
+		number_label.position = Vector2(0, 34)
+		number_label.size = Vector2(56, 24)
+		number_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		number_label.add_theme_font_size_override("font_size", 16)
+		number_label.add_theme_color_override("font_color", Color("405a36"))
+		number_label.add_theme_constant_override("outline_size", 4)
+		number_label.add_theme_color_override("font_outline_color", Color("fff8e9"))
+		number_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		slot.add_child(number_label)
+		slots.append(slot)
+		slot_nodes.append(slot)
+	level2_slots[target_id] = slots
+
+
+func _fill_level_2_slot(target_id: String, slot_index: int) -> void:
+	var slots: Array = level2_slots.get(target_id, [])
+	if slot_index < 0 or slot_index >= slots.size():
+		return
+	var slot: Panel = slots[slot_index]
+	if not is_instance_valid(slot):
+		return
+	var sprite: Sprite2D = slot.get_meta("sprite")
+	var base_scale: float = slot.get_meta("base_scale")
+	sprite.modulate = Color.WHITE
+	sprite.scale = Vector2.ONE * base_scale * 1.35
+	var pop := create_tween()
+	pop.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	pop.tween_property(sprite, "scale", Vector2.ONE * base_scale, 0.25)
+
+
+func _level_2_target_at(item_center: Vector2) -> String:
+	var best := ""
+	var best_distance := INF
+	for id in ["lili", "tutu"]:
+		var index := target_ids.find(id)
+		if index < 0:
 			continue
-		_add_item("res://assets/objects/food/obj_strawberry_%02d.png" % (index % 3 + 1), Vector2(230 + index * 100, 310), target_id, {"kind": "strawberry", "index": index})
+		var rect: Rect2 = target_rects[index]
+		if not rect.grow(34.0).has_point(item_center):
+			continue
+		var distance := item_center.distance_to(rect.get_center())
+		if distance < best_distance:
+			best_distance = distance
+			best = id
+	return best
+
+
+func _level_2_status(target_id: String) -> String:
+	var lili := int(state.get("lili_count", 0))
+	var tutu := int(state.get("tutu_count", 0))
+	var name_text := "Lili" if target_id == "lili" else "Tutu"
+	var other_name := "Tutu" if target_id == "lili" else "Lili"
+	var mine := lili if target_id == "lili" else tutu
+	var other := tutu if target_id == "lili" else lili
+	if lili >= SHARE_PER_CHILD and tutu >= SHARE_PER_CHILD:
+		return "Hebat! Lili %d stroberi, Tutu %d stroberi. Sama banyak!" % [SHARE_PER_CHILD, SHARE_PER_CHILD]
+	if mine >= SHARE_PER_CHILD:
+		return "%s sudah dapat %d stroberi. Sekarang bagi ke %s ya!" % [name_text, SHARE_PER_CHILD, other_name]
+	return "%s dapat %d dari %d stroberi. %s dapat %d." % [name_text, mine, SHARE_PER_CHILD, other_name, other]
 
 
 func _build_level_3() -> void:
@@ -400,7 +559,8 @@ func _build_level_3() -> void:
 	for index in 4:
 		_add_target(Vector2(226 + index * 150, 48), Vector2(150, 72), "board_%d" % index, Color("e8c38d"))
 		if index >= placed.size() or not bool(placed[index]):
-			_add_item("res://assets/objects/bridge/obj_wood_%02d.png" % (index + 1), Vector2(255 + index * 150, 250), "board_%d" % index, {"kind": "board", "index": index})
+			var item_kind := "log" if index == 3 else "board"
+			_add_item("res://assets/objects/bridge/obj_wood_%02d.png" % (index + 1), Vector2(255 + index * 150, 250), "board_%d" % index, {"kind": item_kind, "index": index})
 	for index in 2:
 		var rope_index := index + 4
 		_add_target(Vector2(340 + index * 192, 150), Vector2(180, 52), "rope_%d" % index, Color("d7c39a"))
@@ -411,19 +571,23 @@ func _build_level_3() -> void:
 func _build_level_4() -> void:
 	var served: Array = state.get("served", [false, false, false, false, false])
 	var food_paths := ["res://assets/objects/food/obj_cake_01.png", "res://assets/objects/food/obj_bread_01.png", "res://assets/objects/food/obj_fruit_01.png", "res://assets/objects/drinks/obj_juice_01.png", "res://assets/objects/food/obj_bread_01.png"]
+	_add_section_label("MAKANAN  -  BAGIKAN KE WARGA", Vector2(32, 4), Vector2(430, 26))
 	for index in 5:
-		_add_target(Vector2(181 + index * 145, 42), Vector2(110, 108), "food_%d" % index, Color("f5ddb1"))
+		var column_x := 86.0 + index * 180.0
+		_add_target(Vector2(column_x, 58), Vector2(160, 92), "food_%d" % index, Color("f5ddb1"), true)
 		if not bool(served[index]):
-			_add_item(food_paths[index], Vector2(190 + index * 145, 250), "food_%d" % index, {"kind": "food", "index": index})
+			_add_item(food_paths[index], Vector2(column_x + 34.0, 150), "food_%d" % index, {"kind": "food", "index": index})
 	var placed_decorations: Array = state.get("decorations", [])
 	if placed_decorations.is_empty():
 		for index in mini(int(state.get("decorations_placed", 0)), 4):
 			placed_decorations.append(index)
 	var decoration_paths := ["res://assets/objects/tableware/obj_tableware_01.png", "res://assets/objects/tableware/obj_tableware_02.png", "res://assets/objects/tableware/obj_tableware_03.png", "res://assets/objects/tableware/obj_tableware_04.png"]
+	_add_section_label("PERLENGKAPAN  -  TATA DI MEJA PESTA", Vector2(32, 218), Vector2(700, 26))
 	for index in 4:
-		_add_target(Vector2(216 + index * 170, 180), Vector2(110, 62), "decor_%d" % index, Color("d8efc9"))
+		var column_x := 79.0 + index * 228.0
+		_add_target(Vector2(column_x, 278), Vector2(210, 92), "decor_%d" % index, Color("d8efc9"), true)
 		if not placed_decorations.has(index):
-			_add_item(decoration_paths[index], Vector2(225 + index * 170, 325), "decor_%d" % index, {"kind": "decor", "index": index})
+			_add_item(decoration_paths[index], Vector2(column_x + 59.0, 326), "decor_%d" % index, {"kind": "decor", "index": index})
 
 
 func _build_level_5() -> void:
@@ -450,6 +614,20 @@ func _garden_item_position(index: int) -> Vector2:
 	var column := index % 5
 	var row := floori(float(index) / 5.0)
 	return Vector2(55 + column * 195, 232 + row * 94)
+
+
+func _add_section_label(text_value: String, position_value: Vector2, label_size: Vector2) -> void:
+	var section_label := Label.new()
+	section_label.text = text_value
+	section_label.position = position_value
+	section_label.size = label_size
+	section_label.add_theme_font_size_override("font_size", 17)
+	section_label.add_theme_color_override("font_color", Color("7f5c3e"))
+	section_label.add_theme_constant_override("outline_size", 3)
+	section_label.add_theme_color_override("font_outline_color", Color("fff7e4"))
+	section_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	interaction_area.add_child(section_label)
+	section_label_nodes.append(section_label)
 
 
 func _add_character(path: String, character_name: String, position_value: Vector2, _id: String) -> void:
@@ -482,7 +660,7 @@ func _add_character(path: String, character_name: String, position_value: Vector
 	interaction_area.add_child(label)
 
 
-func _add_target(position_value: Vector2, target_size: Vector2, target_id: String, color: Color) -> void:
+func _add_target(position_value: Vector2, target_size: Vector2, target_id: String, color: Color, label_above: bool = false) -> void:
 	var target := Panel.new()
 	target.position = position_value
 	target.size = target_size
@@ -497,12 +675,12 @@ func _add_target(position_value: Vector2, target_size: Vector2, target_id: Strin
 	interaction_area.add_child(target)
 	var target_label := Label.new()
 	target_label.text = _target_hint(target_id)
-	target_label.position = Vector2(8, target_size.y - 28)
-	target_label.size = Vector2(target_size.x - 16, 22)
+	target_label.position = Vector2(8, -26) if label_above else Vector2(8, target_size.y - 28)
+	target_label.size = Vector2(target_size.x - 16, 24)
 	target_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	target_label.add_theme_font_size_override("font_size", 13)
+	target_label.add_theme_font_size_override("font_size", 14 if label_above else 13)
 	target_label.add_theme_color_override("font_color", Color("405a36"))
-	target_label.add_theme_constant_override("outline_size", 2)
+	target_label.add_theme_constant_override("outline_size", 4 if label_above else 2)
 	target_label.add_theme_color_override("font_outline_color", Color("fff8e9"))
 	target_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	target.add_child(target_label)
@@ -534,7 +712,7 @@ func _add_item(path: String, position_value: Vector2, target_id: String, item_da
 		visual.scale = Vector2.ONE * fit_scale
 	item.add_child(visual)
 	var item_kind := str(item_data.get("kind", ""))
-	if item_kind in ["board", "rope", "strawberry", "food", "decor", "garden"]:
+	if item_kind in ["board", "log", "rope", "food", "decor", "garden"]:
 		var item_index := int(item_data.get("index", 0))
 		var item_number := item_index + 1
 		if item_kind == "rope":
@@ -568,19 +746,46 @@ func _add_item(path: String, position_value: Vector2, target_id: String, item_da
 func _on_item_dropped(item: HeroDragItem) -> void:
 	var target_id := str(item.get_meta("target_id", ""))
 	var item_center := item.position + item.size * 0.5
+	if level_id == &"level_2":
+		# Stroberi boleh dibagikan ke Lili atau Tutu, selama kotaknya belum penuh.
+		target_id = _level_2_target_at(item_center)
+		if target_id == "":
+			item.return_home()
+			status_label.text = "Letakkan stroberi di kotak Lili atau Tutu ya!"
+			return
+		var received_now := int(state.get("lili_count" if target_id == "lili" else "tutu_count", 0))
+		if received_now >= SHARE_PER_CHILD:
+			item.return_home()
+			var full_name := "Lili" if target_id == "lili" else "Tutu"
+			var other_name := "Tutu" if target_id == "lili" else "Lili"
+			status_label.text = "%s sudah dapat %d stroberi. Bagi ke %s ya!" % [full_name, SHARE_PER_CHILD, other_name]
+			return
 	var target_index := target_ids.find(target_id)
 	if target_index < 0 or not target_rects[target_index].grow(34.0).has_point(item_center):
 		item.return_home()
 		status_label.text = "Belum tepat. Geser pelan-pelan ke kotak hijau ya!"
 		return
 	item.locked = true
-	item.position = target_rects[target_index].get_center() - item.size * 0.5
 	item.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if level_id != &"level_2":
+		item.position = target_rects[target_index].get_center() - item.size * 0.5
 	var item_data: Dictionary = item.get_meta("item_data", {})
 	var next_state := state.duplicate(true)
 	if level_id == &"level_2":
 		var key := "lili_count" if target_id == "lili" else "tutu_count"
 		next_state[key] = int(next_state.get(key, 0)) + 1
+		var slot_index := int(next_state[key]) - 1
+		var slots: Array = level2_slots.get(target_id, [])
+		if slot_index < slots.size():
+			# Stroberi terbang ke slot kosong lalu slot berubah jadi stroberi berwarna.
+			var slot_node: Panel = slots[slot_index]
+			var fly := create_tween()
+			fly.tween_property(item, "position", slot_node.position + slot_node.size * 0.5 - item.size * 0.5, 0.22)
+			fly.tween_callback(func() -> void:
+				_fill_level_2_slot(target_id, slot_index)
+				if is_instance_valid(item):
+					item.queue_free()
+			)
 	elif level_id == &"level_3":
 		var placed: Array = next_state.get("placed", [false, false, false, false, false, false])
 		if placed.size() < 6:
@@ -608,7 +813,7 @@ func _on_item_dropped(item: HeroDragItem) -> void:
 	current_progress += 1
 	item_success.emit(state)
 	_update_instruction_text()
-	status_label.text = _objective_summary()
+	status_label.text = _level_2_status(target_id) if level_id == &"level_2" else _objective_summary()
 	_update_progress()
 	if current_progress >= target_progress:
 		mission_completed.emit()
@@ -625,7 +830,7 @@ func _update_progress() -> void:
 
 func _objective_summary() -> String:
 	if level_id == &"level_2":
-		return "%s  |  %s" % [_objective_count("Lili", int(state.get("lili_count", 0)), 3), _objective_count("Tutu", int(state.get("tutu_count", 0)), 3)]
+		return "%s  |  %s" % [_objective_count("Lili", int(state.get("lili_count", 0)), SHARE_PER_CHILD), _objective_count("Tutu", int(state.get("tutu_count", 0)), SHARE_PER_CHILD)]
 	if level_id == &"level_3":
 		var placed: Array = state.get("placed", [false, false, false, false, false, false])
 		var boards := 0
@@ -659,11 +864,13 @@ func _objective_count(label: String, current: int, target: int) -> String:
 
 
 func _target_hint(target_id: String) -> String:
-	if target_id == "lili":
-		return "1, 3, 5 - LILI"
 	if target_id == "tutu":
-		return "2, 4, 6 - TUTU"
+		return "TUTU - %d STROBERI" % SHARE_PER_CHILD
+	if target_id == "lili":
+		return "LILI - %d STROBERI" % SHARE_PER_CHILD
 	if target_id.begins_with("board"):
+		if target_id == "board_3":
+			return "4. BATANG KAYU"
 		return "%d. PAPAN" % (int(target_id.trim_prefix("board_")) + 1)
 	if target_id.begins_with("rope"):
 		return "%d. TALI" % (int(target_id.trim_prefix("rope_")) + 1)
@@ -710,9 +917,16 @@ func _clear_items() -> void:
 	for target in target_nodes:
 		if is_instance_valid(target):
 			target.queue_free()
+	for section_label in section_label_nodes:
+		if is_instance_valid(section_label):
+			section_label.queue_free()
+	for slot in slot_nodes:
+		if is_instance_valid(slot):
+			slot.queue_free()
+	slot_nodes.clear()
+	level2_slots = {"lili": [], "tutu": []}
 	item_nodes.clear()
 	target_nodes.clear()
+	section_label_nodes.clear()
 	target_rects.clear()
 	target_ids.clear()
-
-

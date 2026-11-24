@@ -4,6 +4,9 @@ var tutu: NpcCharacter
 var lili_count := 0
 var tutu_count := 0
 var strawberry_label: Label
+# Harus sama dengan HeroMissionWindow.SHARE_PER_CHILD
+const SHARE_PER_CHILD := 3
+const TOTAL_STRAWBERRIES := SHARE_PER_CHILD * 2
 
 
 func _mission_window_title() -> String:
@@ -15,7 +18,7 @@ func _mission_portrait_path() -> String:
 
 
 func _mission_instruction() -> String:
-	return "Seret stroberi kepada Lili dan Tutu. Bagikan tiga stroberi untuk masing-masing!"
+	return "Bagi %d stroberi sama banyak: %d untuk Lili, %d untuk Tutu." % [TOTAL_STRAWBERRIES, SHARE_PER_CHILD, SHARE_PER_CHILD]
 
 
 func _ready() -> void:
@@ -34,14 +37,14 @@ func _ready() -> void:
 
 
 func start_level_mission() -> void:
-	MissionManager.start_mission("Berbagi Itu Indah!", 6)
+	MissionManager.start_mission("Berbagi Itu Indah!", TOTAL_STRAWBERRIES)
 	if hero_mode_enabled():
 		return
 	var state := MissionManager.get_level_state()
-	lili_count = clampi(int(state.get("lili_count", 0)), 0, 3)
-	tutu_count = clampi(int(state.get("tutu_count", 0)), 0, 3)
+	lili_count = clampi(int(state.get("lili_count", 0)), 0, SHARE_PER_CHILD)
+	tutu_count = clampi(int(state.get("tutu_count", 0)), 0, SHARE_PER_CHILD)
 	var spawned := 0
-	for index in 6:
+	for index in TOTAL_STRAWBERRIES:
 		if (index % 2 == 0 and index / 2 < lili_count) or (index % 2 == 1 and index / 2 < tutu_count):
 			continue
 		var strawberry := WorldObject.new()
@@ -52,9 +55,9 @@ func start_level_mission() -> void:
 		spawned += 1
 		strawberry.drag_ended.connect(_on_strawberry_dropped)
 		add_child(strawberry)
-	show_notice("Seret stroberi langsung ke tangan Lili atau Tutu. Bagikan 3 untuk masing-masing!")
-	mission_progress_label.text = "Lili %d/3 berbagi  •  Tutu %d/3 berbagi" % [lili_count, tutu_count]
-	mission_label.text = "Lili: %d/3     Tutu: %d/3" % [lili_count, tutu_count]
+	show_notice(_mission_instruction())
+	mission_progress_label.text = "Lili %d/%d berbagi  •  Tutu %d/%d berbagi" % [lili_count, SHARE_PER_CHILD, tutu_count, SHARE_PER_CHILD]
+	mission_label.text = "Lili: %d/%d     Tutu: %d/%d" % [lili_count, SHARE_PER_CHILD, tutu_count, SHARE_PER_CHILD]
 
 
 func _on_strawberry_dropped(strawberry: WorldObject) -> void:
@@ -64,14 +67,14 @@ func _on_strawberry_dropped(strawberry: WorldObject) -> void:
 		show_notice("Dekatkan stroberi ke tangan temanmu.")
 		return
 	if d_lili <= d_tutu:
-		if lili_count >= 3:
-			show_notice("Lili sudah mendapat tiga stroberi. Tutu masih menunggu!")
+		if lili_count >= SHARE_PER_CHILD:
+			show_notice("Lili sudah mendapat %d stroberi. Tutu masih menunggu!" % SHARE_PER_CHILD)
 			return
 		lili_count += 1
 		player.get_node("Visuals").scale = Vector2(1.06, 1.06)
 	else:
-		if tutu_count >= 3:
-			show_notice("Tutu sudah mendapat tiga stroberi. Bagikan kepada Lili!")
+		if tutu_count >= SHARE_PER_CHILD:
+			show_notice("Tutu sudah mendapat %d stroberi. Bagikan kepada Lili!" % SHARE_PER_CHILD)
 			return
 		tutu_count += 1
 		tutu.set_sad(false)
@@ -84,8 +87,8 @@ func _on_strawberry_dropped(strawberry: WorldObject) -> void:
 	tween.tween_property(strawberry, "global_position", recipient, 0.28)
 	tween.tween_callback(strawberry.queue_free)
 	MissionManager.advance()
-	mission_label.text = "Lili: %d/3     Tutu: %d/3" % [lili_count, tutu_count]
-	mission_progress_label.text = "Lili %d/3  •  Tutu %d/3" % [lili_count, tutu_count]
+	mission_label.text = "Lili: %d/%d     Tutu: %d/%d" % [lili_count, SHARE_PER_CHILD, tutu_count, SHARE_PER_CHILD]
+	mission_progress_label.text = "Lili %d/%d  •  Tutu %d/%d" % [lili_count, SHARE_PER_CHILD, tutu_count, SHARE_PER_CHILD]
 	show_notice("Terima kasih! Lili dan Tutu senang berbagi bersama.")
-	if lili_count == 3 and tutu_count == 3:
+	if lili_count == SHARE_PER_CHILD and tutu_count == SHARE_PER_CHILD:
 		show_notice("Semua stroberi terbagi rata! Ketiga sahabat menikmati bekal bersama. Ketuk keranjang di kanan untuk lanjut.")

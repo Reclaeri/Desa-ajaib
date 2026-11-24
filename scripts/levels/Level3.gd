@@ -15,7 +15,7 @@ func _mission_portrait_path() -> String:
 
 
 func _mission_instruction() -> String:
-	return "Seret 4 papan dan 2 tali ke tempat yang benar."
+	return "Seret 3 papan, 1 batang kayu, dan 2 tali ke tempat yang benar."
 
 
 func _mission_focus_position() -> Vector2:
@@ -55,7 +55,7 @@ func start_level_mission() -> void:
 			add_child(gap)
 			bridge_gaps.append(gap)
 		var board := WorldObject.new()
-		board.object_label = "Papan %d" % (index + 1)
+		board.object_label = "Batang kayu" if index == 3 else "Papan %d" % (index + 1)
 		board.texture_path = "res://assets/objects/bridge/obj_wood_%02d.png" % (index + 1)
 		board.draggable = not placed[index]
 		board.position = Vector2(1520 + index * 92, 622) if placed[index] else Vector2(1030 + index * 105, OBJECT_CENTER_Y)
@@ -80,7 +80,7 @@ func start_level_mission() -> void:
 		bridge_components.append(rope)
 	if MissionManager.current_progress == 6:
 		backdrop.set_background("res://assets/backgrounds/bg_level_03_river_repaired.png")
-	show_notice("Jembatan rusak! Seret papan dan tali ke tempatnya.")
+	show_notice("Jembatan rusak! Pasang 3 papan, 1 batang kayu, dan 2 tali.")
 
 
 func _on_component_dropped(component: WorldObject, index: int) -> void:
