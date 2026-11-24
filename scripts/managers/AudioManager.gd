@@ -12,7 +12,7 @@ const MUSIC_THEMES := {
 	&"mission": preload("res://assets/audio/music/music_mission.wav"),
 	&"ending": preload("res://assets/audio/music/music_ending.wav"),
 }
-const FULL_GAME_MUSIC := preload("res://assets/audio/music/music_village_adventure.mp3")
+const FULL_GAME_MUSIC := preload("res://assets/audio/music/music_studiokolomna_cute_piano.mp3")
 const SFX_FOOTSTEP := preload("res://assets/audio/sfx/sfx_step.mp3")
 const SFX_UI_POP := preload("res://assets/audio/sfx/sfx_button_click.mp3")
 const SFX_STRAWBERRY := preload("res://assets/audio/sfx/sfx_strawberry.wav")
