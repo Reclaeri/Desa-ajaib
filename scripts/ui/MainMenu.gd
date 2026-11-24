@@ -280,8 +280,10 @@ func _add_guide_key(container: HBoxContainer, key_text: String, key_color: Color
 
 func _on_exit_pressed() -> void:
 	# Di browser, get_tree().quit() menghentikan engine sehingga game membeku.
-	# Jadi di web tampilkan layar perpisahan, bukan quit.
+	# Jadi di web coba tutup tab langsung; kalau browser menolak, tampilkan layar perpisahan.
 	if OS.has_feature("web"):
+		JavaScriptBridge.eval("window.open('', '_self'); window.close();")
+		await get_tree().create_timer(0.4).timeout
 		_show_web_goodbye()
 		return
 	get_tree().quit()
